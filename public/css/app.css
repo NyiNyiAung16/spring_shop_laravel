@@ -1,0 +1,192 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#dashboardHome,.dashboardCreate{
+    color: #222;
+    font-size: 17px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.7s;
+}
+
+#dashboardHome::after,.dashboardCreate::after{
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: gray;
+    transform: scale(0);
+    transition: all 0.7s ;
+}
+
+#dashboardHome:hover,.dashboardCreate:hover{
+    color: #777;
+}
+
+#dashboardHome:hover#dashboardHome::after,.dashboardCreate:hover.dashboardCreate::after{
+    transform: scale(1);
+}
+#ellipsis{
+    cursor: pointer;
+    transition: color 0.8s;
+}
+#ellipsis:hover{
+    color: #777;
+}
+
+#trash,#edit{
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.9s ease;
+}
+#trash:hover{
+    color: red;
+}
+#edit:hover{
+    color: yellow;
+}
+
+#heroSection{
+    font-size: 20px;
+}
+
+#heroP{
+    font-size: 30px;
+}
+
+#detail{
+    max-width: 400px;
+}
+#detailRight{
+    padding-left: 30px;
+}
+#card{
+    max-width: 300px;
+}
+#card img{
+    max-height: 170px;
+    object-fit:contain;
+}
+#detail img{
+    max-height: 240px;
+    object-fit:contain;
+}
+
+@media only screen and (max-width: 600px) {
+    #heroSection{
+        font-size: 16px;
+    }
+    #heroP{
+        font-size: 24px;
+    }
+    #detail{
+        max-width: 300px;
+        margin: 0px 5px;
+    }
+    #detail img{
+        max-height: 200px;
+    }
+    #card{
+        max-width: 300px;
+        margin: 0px 5px;
+    }
+    #card img{
+        max-height: 200px;
+    }
+    #detailRight{
+        padding-left: 0px;
+        padding: 0px 5px;
+    }
+}
+
+/* footer style */
+.footerlink{
+    color: rgb(230, 239, 106);
+}
+.footerlink:hover,.footericon:hover{
+    color: rgb(177, 177, 87);
+    transition: color 0.6s;
+}
+.footericon{
+    color: rgb(230, 239, 106);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* register style */
+.register{
+    max-width: 550px;
+    margin: auto;
+    position: relative;
+}
+.login{
+    max-width: 480px;
+    margin: auto;
+    position: relative;  
+}
+.register::before,.login::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 5px;
+    background-image: url('../images/register.jpg');
+    background-position: center;
+}
+
+/* profile style */
+.profileImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+#profile{
+    background-color: gray;
+    position: absolute;
+    left: -80px;
+    top: 50px;
+    padding: 5px;
+    border-radius: 5px;
+}
+#profile ul {
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+
+#profile ul li{
+    margin: 0;
+    padding: 5px 13px;
+    border-radius: 5px;
+}
+#profile ul li:hover{
+    background-color: #666;
+}
+.slideBar{
+    position: fixed;
+    right: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    /* background: #042331; */
+    background: #2e353c;
+    transition: all .5s ease;
+}
+.mark{
+    color: #888;
+    background: none;
+}
+.mark:hover{
+    color: #b61b1b;
+    transition: color 0.8s ease;
+}
