@@ -15,7 +15,10 @@
             </div>
         </div> 
     @empty
-        <p class="text-danger fs-4 text-center">Nothing to search!</p>
+        <div class="mt-4">
+            <img src="/images/nothingSearch.jpg" alt="nothingsearch" class="d-block rounded mx-auto" style="max-width: 200px;">
+            <p class="text-danger fs-4 text-center">Nothing to search!</p>
+        </div>
     @endforelse
     {{ $products->links() }}
 </div>

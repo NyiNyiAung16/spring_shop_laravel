@@ -12,7 +12,8 @@
             <h4 class="fs-3">{{$product->name}}</h4>
             <p class="text-warning m-0">${{$product->price}}</p>
             <p class="text-light">{{$product->category->name}}</p>
-            <p class="">{{ $product->description }}</p>
+            <label class="fs-5 fw-bold text-light mb-1">Description</label>
+            <p>{{ $product->description }}</p>
             <a href="/products/{{$product->id}}/AddToCart" class="btn btn-primary"><i class="fa-solid fa-cart-shopping me-1"></i>Add to cart</a>
         </div>
     </div>

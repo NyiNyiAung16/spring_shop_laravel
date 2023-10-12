@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Str;
 use App\Models\Category;
 use App\Models\Comment;
 use App\Models\Product;
@@ -11,9 +12,9 @@ class ProductController extends Controller
 {     
     public function index() {
         if(request(['search','category'])){
-            $products = Product::filter(request(['search','category']))->paginate(8);
+            $products = Product::filter(request(['search','category']))->paginate(12);
         }else{
-            $products = Product::paginate(8);
+            $products = Product::paginate(12);
         }
         
         return view('welcome',[
@@ -46,6 +47,7 @@ class ProductController extends Controller
     }
 
     public function showProducts(User $user){
+        
         return view('products.showATCProducts',[
             'cartProducts' => $user->AddToCartProducts,
             'totalPrice' =>auth()->user()->AddToCartProducts->map( function($c){return (int) $c->price;})->sum()
